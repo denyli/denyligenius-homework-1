@@ -1,1 +1,1 @@
-# denyligenius-homework-1
+# genius-lesson-project
