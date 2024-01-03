@@ -1,1 +1,0 @@
-# denyligenius-homework-1
