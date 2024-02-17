@@ -39,7 +39,10 @@
   --color-secondary-dark: #a28286;
 }
 
-* {
+/* Base */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -61,6 +64,10 @@ h5,
 h6,
 p {
   margin-top: 0;
+}
+
+a {
+  display: inline-block;
 }
 
 address {
@@ -187,7 +194,7 @@ ul {
 }
 
 .section-title {
-  font-size: 64px;
+  font-size: 62px;
   font-weight: 900;
   line-height: 1.3;
 }
@@ -246,6 +253,21 @@ ul {
   content: '';
 }
 
+.chefs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 30px;
+}
+
+.chefs-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+
+.chef-card {
+  display: flex;
+  gap: 30px;
+}
+
 .chef-photo {
   border-radius: 4px 4px 4px 200px;
   box-shadow: -16px 16px 0 0 var(--color-primary-light),
@@ -258,7 +280,21 @@ ul {
   font-weight: 600;
 }
 
+.chef-text p {
+  margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+  margin-bottom: 0;
+}
+
 /* Formats section */
+.formats-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
 .formats-list {
   display: flex;
   flex-wrap: wrap;
@@ -302,6 +338,9 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
   padding: 0;
   fill: var(--color-primary-dark);
   background-color: transparent;
@@ -316,11 +355,52 @@ ul {
 }
 
 /* Contact section */
+.contact-section {
+  padding-bottom: 96px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 32px;
+}
+
 .contact-title {
   margin-bottom: 16px;
 }
 
+.contact-map {
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: none;
+}
+
 /* Footer */
+.footer {
+  padding: 32px 0;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+
+.address-list,
+.address-info {
+  flex-grow: 1;
+}
+
 .address-link {
   clear: var(--color-primary-light);
   font-size: 16px;
